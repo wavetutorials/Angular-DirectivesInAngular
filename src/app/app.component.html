@@ -1,0 +1,56 @@
+<div class="toolbar"><img width="40" alt="Angular Logo" src="assets/angular.svg" />
+  <span>Angular Tutorials</span>
+  <div class="spacer"></div>
+  <h3>Wave Tutorials</h3>
+  <div class="spacer"></div>
+</div>
+<div class="header">{{title}}</div>
+<hr />
+<div class="content">
+  <b>
+
+    <div *ngIf="showDiv">Example of ngIf</div>
+
+    <div *ngFor="let item of stuff">
+      {{'Id : ' + item.id}}
+      {{'Name : ' + item.name}}
+    </div>
+
+    <br />
+
+    <div [ngSwitch]="nameOfEmployee">
+      <div *ngSwitchCase="'Mark'">
+        Welcome Mark
+      </div>
+
+      <div *ngSwitchCase="'John'">
+        Welcome John
+      </div>
+
+      <div *ngSwitchCase="'Jack'">
+        Welcome Jack
+      </div>
+
+      <div *ngSwitchDefault>
+        Invalid Inputs
+      </div>
+
+    </div>
+
+<br/>
+
+<div>
+
+<p [ngStyle]="{'font-size':'20px'}">Example of NgStyle</p>
+
+<button [ngClass]="['btn']">ngClass</button>
+<button [ngClass]="{btn:false, class2: true}">ngClass</button>
+
+
+</div>
+
+
+  </b>
+</div>
+
+<router-outlet></router-outlet>
